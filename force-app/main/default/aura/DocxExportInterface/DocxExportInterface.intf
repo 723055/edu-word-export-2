@@ -1,0 +1,16 @@
+<!--
+ - Created by Leonid Bartenev
+ -->
+
+<aura:interface description="DocxExportInterface">
+
+    <!-- attributes: -->
+    <aura:attribute name="templatePath" type="String"/>
+    <aura:attribute name="fileName" type="String"/>
+
+    <!-- methods: -->
+    <aura:method name="loadData" access="public" >
+        <aura:attribute name="callback" type="Function" access="public"/>
+    </aura:method>
+
+</aura:interface>

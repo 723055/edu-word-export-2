@@ -1,0 +1,15 @@
+<!--
+ - Created by user on 5/16/2019.
+ -->
+
+<aura:component description="OpportunityToDocx" extends="c:ObjectToDocx" controller="OpportunityToDocxRemote">
+
+    <aura:attribute name="templatePath" type="String" default="{!$Resource.OpportunityTemplate}"/>
+    <aura:attribute name="fileName" type="String" default="OpportunityExport"/>
+
+    <!-- methods: -->
+    <aura:method name="loadData" access="public"  action="{!c.doLoadData}">
+        <aura:attribute name="callback" type="Function" access="public"/>
+    </aura:method>
+
+</aura:component>

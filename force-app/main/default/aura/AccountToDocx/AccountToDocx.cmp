@@ -1,0 +1,14 @@
+<!--
+ - Created by Leonid Bartenev
+ -->
+
+<aura:component description="AccountToDocx" controller="AccountToDocxRemote" extends="c:ObjectToDocx">
+
+    <aura:attribute name="templatePath" type="String" default="{!$Resource.AccountExportTemplate}"/>
+    <aura:attribute name="fileName" type="String" default="AccountExportDemo"/>
+
+    <aura:method name="loadData" action="{!c.doLoadData}" access="public" >
+        <aura:attribute name="callback" type="Function" access="public"/>
+    </aura:method>
+
+</aura:component>

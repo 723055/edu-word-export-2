@@ -1,0 +1,19 @@
+<!--
+ - Created by Leonid Bartenev
+ -->
+
+<aura:component description="ObjectToDocx" abstract="true" extensible="true"
+                implements="force:lightningQuickAction, force:hasRecordId, c:DocxExportInterface">
+    <ltng:require scripts="{!join(',',
+            $Resource.DocxExport + '/filesaver.js',
+            $Resource.DocxExport + '/jszip.js',
+            $Resource.DocxExport + '/jszip-utils.js',
+            $Resource.DocxExport + '/utils.js',
+            $Resource.DocxExport + '/docxtemplater.js',
+            $Resource.LightningHelper_JS
+            )}" afterScriptsLoaded="{!c.doInit}"/>
+    <div>Export processing...</div>
+    <div style="position: relative; height: 150px">
+        <lightning:spinner size="medium" variant="brand" alternativeText="Processing..."/>
+    </div>
+</aura:component>
